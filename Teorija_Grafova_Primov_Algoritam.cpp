@@ -32,7 +32,7 @@ int main()
     {
         int dist = 2e9, tko;
         for (int j=1;j<=n;j++)
-            if ( bio[j] && dist > uda[i] ) dist = uda[i], tko = j;
+            if ( bio[j] && dist > uda[i] ) dist = uda[j], tko = j;
         bio[tko] = false;
         MST+=dist;
 
