@@ -1,4 +1,4 @@
-int binarna_pretraga(int lijevo, int desno, int niz[], int ele)
+int binarna_pretraga1(int lijevo, int desno, int niz[], int ele)
 {
     while ( lijevo <= desno )
     {
@@ -10,4 +10,16 @@ int binarna_pretraga(int lijevo, int desno, int niz[], int ele)
     }
 
     return lijevo;
+}
+
+int binarna_pretraga2(int a[], int begin, int end, int kljuc)
+{
+    if ( begin <= end )
+    {
+        int sredina = (begin + end)/2;
+
+        if ( a[sredina] == kljuc ) return sredina;
+        else if ( a[sredina] > kljuc ) return binarna_pretraga(a,begin, sredina -1, kljuc);
+        else return binarna_pretraga(a, sredina+1, end,kljuc);
+    }
 }
