@@ -1,3 +1,13 @@
+/*
+    a - array of numbers
+    n - size of the array
+    dp - value of subarrays
+    i (for loop) - place where the subarray would end (we assume)
+
+    Time complexity: O(n)
+    Space complexity: O(n)
+*/
+
 int kadane_s(vector <int> a, int n)
 {
     vector <int> dp(n, 0);
