@@ -1,3 +1,9 @@
+/*
+
+    Time complexity (for query): O(log MAXN)
+
+*/
+
 void pre_compute()
 {
     for (int i=0;i<n;i++) st[i][0] = a[i];
@@ -11,8 +17,10 @@ void pre_compute()
 
 int query(int left, int right)
 {
+    int k = 0;
+    while ( (1<<(k+1)) < n ) k++;
     int sum = 0;
-    for (int j=2;j>=0;j--){
+    for (int j=k;j>=0;j--){
         if ( (1<<j) <= right-left+1 )
         {
             sum+=st[left][j];
