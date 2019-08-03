@@ -27,7 +27,7 @@ void build(int node, int l, int r){
 
 void update(int node, int l, int r, int index, int v){
     if ( l == r ){
-        tree[node]+=v;
+        tree[node]=v;
         //niz[index]+=v;
     }
     else{
